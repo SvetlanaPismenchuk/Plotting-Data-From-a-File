@@ -20,7 +20,7 @@ The user specifies which columns to plot on the x and y axes.
 Install Matplotlib with:
 ```bash
 pip install matplotlib
-
+```
 
 ## Acknowledgements
 I'd like to acknowledge Dr. Rumpf for his assistance in the completion of this project, as well as ChatGPT for syntax guidance.
