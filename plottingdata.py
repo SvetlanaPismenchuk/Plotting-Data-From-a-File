@@ -1,6 +1,18 @@
 import matplotlib.pyplot as plt
 
-def read_data(infile, xfield, yfield): #input outputs docstrings
+def read_data(infile, xfield, yfield):  # input outputs docstrings
+    """
+    Reads a CSV file and extracts two specified columns.
+
+    Parameters:
+        infile (str): name of the CSV data file
+        xfield (str): column name for x-axis data
+        yfield (str): column name for y-axis data
+
+    Returns:
+        tuple: two lists (x values, y values) as floats
+    """
+    
     x = []
     y = []
      
@@ -22,22 +34,25 @@ def read_data(infile, xfield, yfield): #input outputs docstrings
 
 
 def plot_data(infile, xfield, yfield):
+    """
+    Plots a scatter plot using two columns from a CSV file.
+
+    Parameters:
+        infile (str): name of the CSV data file
+        xfield (str): column name for x-axis
+        yfield (str): column name for y-axis
+
+    Returns:
+        None
+    """
+
     x, y = read_data(infile, xfield, yfield)  # calls function and stores the results # sends back two lists
 
-    plt.scatter(y,x)  # makes a scatter plot x-horizontal y-vertical
-    plt.xlabel(yfield)  # labels the x-axis
-    plt.ylabel(xfield)  # labels the y-axis
+    plt.scatter(x, y)  # makes a scatter plot x-horizontal y-vertical
+    plt.xlabel(xfield)  # labels the x-axis
+    plt.ylabel(yfield)  # labels the y-axis
     plt.show()  # displays graph
 
 
 plot_data("auto-mpg[1].csv", "mpg", "displacement")
 input()
-
-'''
-```python
-
-code
-
-```
-
-'''
